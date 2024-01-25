@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Administrateur - Bobobazar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Page Administrateur</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pageutilisateur.html">Page Utilisateur</a></li>
+                <li><a href="pageadministrateur.html" class="current">Page Administrateur</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tableau de bord administrateur</h2>
+            <!-- Form to set current value -->
+            <label for="currentValueInput">Current Value:</label>
+            <input type="text" id="currentValueInput" name="currentValue">
+            <button onclick="saveCurrentValue()">Envoyer</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bobobazar</p>
+    </footer>
+    <!-- JavaScript to save the current value -->
+    <script>
+        function saveCurrentValue() {
+            var currentValue = document.getElementById("currentValueInput").value;
+            localStorage.setItem("currentValue", currentValue);
+            alert("Valeur envoyée: " + currentValue);
+        }
+    </script>
+</body>
+</html>

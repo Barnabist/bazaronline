@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Utilisateur - Bobobazar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Page Utilisateur</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pageutilisateur.html" class="current">Page Utilisateur</a></li>
+                <li><a href="pageadministrateur.html">Page Administrateur</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Display area for current value -->
+        <h2>Valeur actuelle:</h2>
+        <div id="currentValueDisplay">Aucune valeur définie</div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bobobazar</p>
+    </footer>
+    <!-- JavaScript to display the current value -->
+    <script>
+        // Check if there is a saved value when the page loads
+        window.onload = function() {
+            var currentValue = localStorage.getItem("currentValue");
+            if (currentValue) {
+                document.getElementById("currentValueDisplay").textContent = currentValue;
+            }
+        }
+    </script>
+</body>
+</html>
